@@ -22,6 +22,7 @@ set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT T
 project(TrenchBroom C CXX)
 
 # Configure CCache if available and requested
+option(TB_ENABLE_CCACHE "Cache compilation result" ON)
 if(TB_ENABLE_CCACHE)
     find_program(CCACHE_PATH ccache)
     if(CCACHE_PATH)
